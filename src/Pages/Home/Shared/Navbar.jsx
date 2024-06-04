@@ -1,6 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../Authfile/Auth";
+import { useContext } from "react";
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
+    const { user } = useContext(AuthContext)
+
     const links = <>
     <li><NavLink to={'/'}>Home</NavLink></li>
     <li><NavLink to={'/alltest'}>All Tests</NavLink></li>
@@ -26,8 +31,18 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-<Link to={"/login"}>  <a className="btn">Login</a>
-</Link>
+  {user ?
+            <>
+              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar my-anchor-element ">
+                <div className="w-10 rounded-full">
+                  <img alt="" src={user.photoURL} />
+                </div></div>
+              <Tooltip anchorSelect=".my-anchor-element" place="top">
+                {user?.email} </Tooltip></>
+            : <Link to={'/login'}>    <a className="btn btn-outline btn-primary">LogIn</a> </Link>
+          }
+    
+  
   </div>
 </div>
         </div>
