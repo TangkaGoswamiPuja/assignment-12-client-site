@@ -61,9 +61,9 @@ required:{value:true,
        
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Photo Url</span>
+            <span className="label-text">Avatar</span>
           </label>
-          <input type="text" placeholder="photo url" name="photo" className="input input-bordered" {...register("photo",{required:{value:true,
+          <input type="text" placeholder="Avatar" name="photo" className="input input-bordered" {...register("photo",{required:{value:true,
             message:"You must fill this input"
           }})}/>
          
@@ -102,6 +102,32 @@ required:{value:true,
 
         </div>
         <div>{errors.password && <p className='text-red-500'>{errors.password.message}</p>}</div> 
+{/* confirm pass */}
+<div className="form-control ">
+          <label className="label">
+            <span className="label-text">Confirm Password</span>
+          </label>
+          <div className='flex gap-3 items-center'>
+            <input type= { show? "text":"password" }name='password' placeholder="confirm password" className="input input-bordered" {...register('password',{
+            required:{
+                value:true,
+                message:"You must fill this input"},
+                minLength:{value:8,
+                    message:"This inputs value must be at least 8 characters"},
+                    pattern:{
+                        value: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
+                        message: " must be use lower case and uppercae"
+                    }
+          })} />
+        <span onClick={()=>setShow(!show)}className='text-xl'>
+       {show?  <BsEyeSlashFill />:<BsEyeFill />}
+        
+         </span></div> 
+
+        </div>
+        <div>{errors.password && <p className='text-red-500'>{errors.password.message}</p>}</div> 
+
+
         <div className="form-control mt-6">
           <button className="btn btn-outline btn-primary">Register</button>
         </div>
