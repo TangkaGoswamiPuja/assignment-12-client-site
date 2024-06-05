@@ -4,11 +4,18 @@ import { useContext } from "react";
 import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
-    const { user } = useContext(AuthContext)
+    const { user ,logOut } = useContext(AuthContext)
+    const handleSignout =()=>{
+      logOut()
+      .then()
+      .catch()
+    }
 
     const links = <>
     <li><NavLink to={'/'}>Home</NavLink></li>
     <li><NavLink to={'/alltest'}>All Tests</NavLink></li>
+    <li><NavLink to={'/userDb'}>User Dashboard</NavLink></li>
+    <li><NavLink to={'/adminDb'}>ADMIN DASHBOARD</NavLink></li>
     </>
     return (
         <div>
@@ -38,8 +45,11 @@ const Navbar = () => {
                   <img alt="" src={user.photoURL} />
                 </div></div>
               <Tooltip anchorSelect=".my-anchor-element" place="top">
-                {user?.email} </Tooltip></>
-            : <Link to={'/login'}>    <a className="btn btn-outline btn-primary">LogIn</a> </Link>
+                {user?.email} </Tooltip>
+                <button className='btn btn-primary btn-outline' onClick={handleSignout}>Sign Out</button>
+</>
+            : <><Link to={'/login'}>    <a className="btn btn-outline btn-primary">LogIn</a> </Link>
+             <Link to={'/register'}>    <a className="btn btn-outline btn-primary">SignUp</a> </Link></>
           }
     
   
