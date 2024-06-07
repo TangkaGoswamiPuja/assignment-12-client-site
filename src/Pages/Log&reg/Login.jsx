@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
@@ -8,9 +8,12 @@ import { AuthContext } from "../../Authfile/Auth";
 
 const Login = () => {
     const [logErr , setLogErr] = useState('')
-    const {signIn,signInGoogle} = useContext(AuthContext)
+    const {signIn,signInGoogle} = useContext(AuthContext);
+
         // console.log('show', location)
-    
+     const navigate = useNavigate();
+     const location = useLocation();
+      const from = location.state?.from?.pathname || "/";
     
         const { register, handleSubmit, formState: { errors } } = useForm();
         const onLogin = data => {
@@ -22,7 +25,7 @@ const Login = () => {
             .then(result=>{
                 // console.log(result.user)
                 toast("logged in successfully")
-    
+    navigate(from,{replace:true});
     
             })
             .catch(error=>{
@@ -39,7 +42,8 @@ const Login = () => {
         .then(result=>{
             // console.log(result.user)
             toast("logged in successfully")
-    
+            navigate(from,{replace:true});
+
     
         })
         .catch(error => {

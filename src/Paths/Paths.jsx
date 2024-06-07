@@ -8,6 +8,7 @@ import Login from "../Pages/Log&reg/Login";
 import Reg from "../Pages/Log&reg/Reg";
 import UserDb from "../Pages/DashBoard/UserDB/UserDb";
 import AdminDb from "../Pages/DashBoard/AdminDB/AdminDb";
+import Private from "../Authfile/Private";
 
   export const router = createBrowserRouter([
     {
@@ -29,7 +30,7 @@ import AdminDb from "../Pages/DashBoard/AdminDB/AdminDb";
           element:<Reg></Reg>
         },
         {path:"/userDb",
-          element:<UserDb></UserDb>
+          element:<Private><UserDb></UserDb></Private>
         },
         {path:"/adminDb",
           element: <AdminDb></AdminDb>
