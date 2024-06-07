@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
-        <div>
+        <div className="mt-10 mb-10">
            <div className="hero min-h-screen" style={{backgroundImage: 'url(https://i.ibb.co/80rQLNm/pexels-shvetsa-3844581.jpg)'}}>
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
@@ -22,7 +22,7 @@ const Banner = () => {
     </div>
   </div>
 </div>
-<Link to={'/alltest'}>      <button className="btn btn-primary mt-3">All Tests</button>
+<Link to={'/alltest'}> <button className="btn btn-primary mt-3 mr-10">All Tests</button>
 </Link>    </div>
   </div>
 </div>
