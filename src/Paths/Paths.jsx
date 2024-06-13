@@ -9,6 +9,7 @@ import Reg from "../Pages/Log&reg/Reg";
 import UserDb from "../Pages/DashBoard/UserDB/UserDb";
 import AdminDb from "../Pages/DashBoard/AdminDB/AdminDb";
 import Private from "../Authfile/Private";
+import Details from "../Pages/All-tests/Details";
 
   export const router = createBrowserRouter([
     {
@@ -22,6 +23,12 @@ import Private from "../Authfile/Private";
             path:"/alltest",
             element:<AllTests></AllTests>
         },
+        {
+          path: '/details/:id',
+          element: <Private><Details></Details></Private>,
+          loader: ({params}) => fetch(`http://localhost:5000/alltest/${params.id}`)
+
+      },
         {
           path:"/login",
           element:<Login></Login>
