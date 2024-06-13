@@ -13,7 +13,7 @@ const AllTests = () => {
         .then(data=>{
             // console.log(data)
             const filterData = data.filter((test) => {
-                console.log(search)
+                // console.log(search)
                 return search === '' ? test : test?.date?.includes(search)
             })
             // console.log(filterData);

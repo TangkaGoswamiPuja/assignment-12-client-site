@@ -1,6 +1,7 @@
 import { useLoaderData, useLocation, useNavigate, useParams } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
 const Details = () => {
     const details = useLoaderData();
@@ -9,7 +10,7 @@ const Details = () => {
     const {user} = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
-
+const axiosSecure = useAxiosSecure();
 
     const handleSlot = slot =>{
         if(user && user.email){
@@ -17,8 +18,21 @@ const Details = () => {
          const slotItem = {
             slotId:_id,
             email: user.email,
-            title,date,time
+            title,date,time, price
          }
+         axiosSecure.post('/slots',slotItem)
+         .then(res=>
+            {console.log(res.data)
+                if(res.data.insertedId){
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Your appontment has been saved",
+                        showConfirmButton: false,
+                        timer: 1500
+                      });
+                }
+  })
     }
         // console.log(slot, user.email);
         else{
