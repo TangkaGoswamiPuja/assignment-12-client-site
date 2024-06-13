@@ -5,7 +5,12 @@
       "date": "2024-11-22",
       "slots": 10,
       "short_description": "A test to evaluate overall health and detect a wide range of disorders.",
-      "category":"few booked"
+      "category":"few booked",
+      "time":"8:00pm",
+      "price": 1000 
+
+
+
     },
     {
       "title": "Lipid Profile",
@@ -13,7 +18,11 @@
       "date": "2024-11-23",
       "slots": 8,
       "short_description": "A blood test that measures lipids—fats and fatty substances used as a source of energy by your body.",
-      "category":"most booked"
+      "category":"most booked",
+      "time":"1:00pm",
+      "price": 2000 
+
+
 
     },
     {
@@ -22,7 +31,11 @@
       "date": "2024-11-24",
       "slots": 15,
       "short_description": "A blood test to help diagnose and monitor liver disease or damage.",
-      "category":"most booked"
+      "category":"most booked",
+      "time":"2:00pm",
+      "price": 3000 
+
+
 
     },
     {
@@ -31,7 +44,11 @@
       "date": "2024-11-25",
       "slots": 5,
       "short_description": "A test to check how well your thyroid is working.",
-      "category":"most booked"
+      "category":"most booked",
+      "time":"3:00pm",
+      "price": 3000 
+
+
 
     },
     {
@@ -40,7 +57,11 @@
       "date": "2024-11-26",
       "slots": 12,
       "short_description": "A test to diagnose diabetes by measuring how well your body can process glucose.",
-      "category":"few booked"
+      "category":"few booked",
+      "time":"4:00pm",
+      "price": 5000 
+
+
 
     },
     {
@@ -49,7 +70,11 @@
       "date": "2024-11-27",
       "slots": 7,
       "short_description": "A test to check how well your kidneys are working.",
-      "category":"few booked"
+      "category":"few booked",
+      "time":"5:00pm",
+      "price": 1000 
+
+
 
     },
     {
@@ -59,7 +84,11 @@
       "slots": 20,
       "short_description": "A blood test to measure the level of vitamin D in your blood.",
       
-      "category":"few booked"
+      "category":"few booked",
+      "time":"6:00pm",
+      "price": 2000 
+
+
 
     },
     {
@@ -68,7 +97,11 @@
       "date": "2024-11-29",
       "slots": 50,
       "short_description": "A molecular test that detects the genetic material of the virus using a lab technique called polymerase chain reaction (PCR).",
-      "category":"few booked"
+      "category":"few booked",
+      "time":"7:00pm",
+      "price": 4000 
+
+
 
     },
     {
@@ -77,7 +110,11 @@
       "date": "2024-11-30",
       "slots": 10,
       "short_description": "A blood test that measures your average blood sugar levels over the past 3 months.",
-      "category":"most booked"
+      "category":"most booked",
+      "time":"6:00pm",
+      "price": 3000 
+
+
 
     },
     {
@@ -86,7 +123,11 @@
       "date": "2024-12-01",
       "slots": 9,
       "short_description": "A test to identify substances that you may be allergic to.",
-      "category":"few booked"
+      "category":"few booked",
+      "time":"7:00pm",
+      "price": 2000 
+
+
 
     },
     {
@@ -95,7 +136,11 @@
       "date": "2024-12-02",
       "slots": 6,
       "short_description": "A test to measure the levels of enzymes and proteins associated with heart damage.",
-      "category":"few booked"
+      "category":"few booked",
+      "time":"5:00pm",
+      "price": 1000 
+
+
 
     },
     {
@@ -104,7 +149,11 @@
       "date": "2024-12-03",
       "slots": 18,
       "short_description": "A test to detect and manage a wide range of disorders, such as urinary tract infections, kidney disease, and diabetes.",
-      "category":"most booked"
+      "category":"most booked",
+      "time":"9:00pm",
+      "price": 4000 
+
+
 
     },
     {
@@ -113,7 +162,11 @@
       "date": "2024-12-04",
       "slots": 14,
       "short_description": "A test to measure the amount of glucose in your blood.",
-      "category":"most booked"
+      "category":"most booked",
+      "time":"4:00pm",
+      "price": 2000 
+
+
 
     },
     {
@@ -122,7 +175,11 @@
       "date": "2024-12-05",
       "slots": 10,
       "short_description": "A blood test used primarily to screen for prostate cancer.",
-      "category":"few booked"
+      "category":"few booked",
+      "time":"6:00pm",
+      "price": 3000 
+
+
 
     },
     {
@@ -131,7 +188,11 @@
       "date": "2024-12-06",
       "slots": 13,
       "short_description": "A test to measure the levels of electrolytes in your blood.",
-      "category":"few booked"
+      "category":"few booked",
+      "time":"8:00pm",
+      "price": 2000 
+
+
 
     },
     {
@@ -140,7 +201,11 @@
       "date": "2024-12-07",
       "slots": 11,
       "short_description": "A blood test marker for inflammation in the body.",
-      "category":"most booked"
+      "category":"most booked",
+      "time":"12:00pm",
+      "price": 1000 
+
+
 
     },
     {
@@ -149,7 +214,11 @@
       "date": "2024-12-08",
       "slots": 9,
       "short_description": "A test to measure the level of calcium in your blood.",
-      "category":"few booked"
+      "category":"few booked",
+      "time":"3:00pm",
+      "price": 2000 
+
+
 
 
     },
@@ -159,7 +228,11 @@
       "date": "2024-12-09",
       "slots": 17,
       "short_description": "A test to measure the amount of iron in your blood.",
-      "category":"most booked"
+      "category":"most booked",
+      "time":"4:00pm",
+      "price": 1000 
+
+
 
     },
     {
@@ -168,7 +241,11 @@
       "date": "2024-12-10",
       "slots": 8,
       "short_description": "A test to measure the level of magnesium in your blood.",
-      "category":"most booked"
+      "category":"most booked",
+      "time":"5:00pm",
+      "price": 3000 
+
+
 
     },
     {
@@ -177,7 +254,11 @@
       "date": "2024-12-11",
       "slots": 7,
       "short_description": "A test to measure the levels of bilirubin in your blood to check for liver disease.",
-      "category":"few booked"
+      "category":"few booked",
+      "time":"9:00pm",
+      "price": 1000 
+
+
 
     },
     {
@@ -186,7 +267,11 @@
       "date": "2024-12-12",
       "slots": 16,
       "short_description": "A test to measure the amount of vitamin B12 in your blood.",
-      "category":"few booked"
+      "category":"few booked",
+      "time":"9:00pm",
+      "price": 2000 
+
+
 
     },
     {
@@ -195,7 +280,11 @@
       "date": "2024-12-13",
       "slots": 12,
       "short_description": "A test to measure the level of folate in your blood.",
-      "category":"most booked"
+      "category":"most booked",
+      "time":"5:00pm",
+      "price": 2000 
+
+
 
     },
     {
@@ -204,7 +293,11 @@
       "date": "2024-12-14",
       "slots": 20,
       "short_description": "A test to determine if you are infected with HIV.",
-      "category":"few booked"
+      "category":"few booked",
+      "time":"9.00pm",
+      "price": 2000 
+
+
 
     },
     {
@@ -213,7 +306,11 @@
       "date": "2024-12-15",
       "slots": 10,
       "short_description": "A test to check for infection with the hepatitis B virus.",
-      "category":"most booked"
+      "category":"most booked",
+      "time":"6:00pm",
+      "price": 1000 
+
+
 
     },
     {
@@ -222,7 +319,11 @@
       "date": "2024-12-16",
       "slots": 8,
       "short_description": "A test to check for infection with the hepatitis C virus.",
-      "category":"few booked"
+      "category":"few booked",
+      "time":"4:00pm",
+      "price": 2000 
+
+
 
     },
     {
@@ -231,7 +332,11 @@
       "date": "2024-12-17",
       "slots": 7,
       "short_description": "A test to diagnose syphilis.",
-      "category":"most booked"
+      "category":"most booked",
+      "time":"8:00pm",
+      "price": 4000 
+
+
 
     },
     {
@@ -240,7 +345,11 @@
       "date": "2024-12-18",
       "slots": 15,
       "short_description": "A test to diagnose chlamydia.",
-      "category":"most booked"
+      "category":"most booked",
+      "time":"9.00pm",
+      "price": 2000 
+
+
 
     },
     {
@@ -249,7 +358,12 @@
       "date": "2024-12-19",
       "slots": 12,
       "short_description": "A test to diagnose gonorrhea.",
-      "category":"few booked"
+      "category":"few booked",
+      "time":"1:00pm",
+      "price": 1000 
+
+
+
 
     },
     {
@@ -258,7 +372,11 @@
       "date": "2024-12-20",
       "slots": 11,
       "short_description": "A test to measure the amount of urea nitrogen in your blood.",
-      "category":"most booked"
+      "category":"most booked",     
+       "time":"9.00pm",
+       "price": 3000 
+
+
 
     },
     {
@@ -267,7 +385,9 @@
       "date": "2024-12-21",
       "slots": 10,
       "short_description": "A test to measure the level of creatinine in your blood.",
-      "category":"few booked"
+      "category":"few booked",
+      "time":"6:00pm",
+      "price": 2000 
 
     }
   ]

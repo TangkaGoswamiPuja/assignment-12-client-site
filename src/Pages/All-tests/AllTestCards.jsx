@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const AllTestCards = ({test}) => {
-    const {_id,title,image,date,slots,short_description}= test;
+    const {_id,title,image,date,slots}= test;
     return (
         <div>
             <div className="card card-compact w-96 bg-base-100 shadow-xl mx-auto">

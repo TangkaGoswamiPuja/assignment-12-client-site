@@ -1,15 +1,41 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useLocation, useNavigate, useParams } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import Swal from "sweetalert2";
 
 const Details = () => {
     const details = useLoaderData();
     const {id} = useParams()
-    const {title,image,date,slots,short_description} = details || {}
+    const {title,image,date,slots,short_description, _id,time,price} = details || {}
     const {user} = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
 
 
     const handleSlot = slot =>{
-        console.log(slot, user.email);
+        if(user && user.email){
+         console.log(slot, user.email);
+         const slotItem = {
+            slotId:_id,
+            email: user.email,
+            title,date,time
+         }
+    }
+        // console.log(slot, user.email);
+        else{
+            Swal.fire({
+                title: "you are not logged in ",
+                text: "please login to book a appointment",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, login!"
+              }).then((result) => {
+                if (result.isConfirmed) {
+                 navigate('/login',{state:{from:location}})
+                }
+              }); 
+        }
 
     }
     return (
@@ -21,6 +47,9 @@ const Details = () => {
     <p>{short_description}</p>
     <p >Date:<span className="bg-pink-400 rounded-sm p-1 font-bold">{date}</span></p>
     <p>Slots: <span className="bg-pink-400 rounded-sm p-1 font-bold">{slots}</span></p>
+    <p>Time: <span className="bg-pink-400 rounded-sm p-1 font-bold">{time}</span></p>
+    <p>Price: <span className="bg-pink-400 rounded-sm p-1 font-bold">{price}</span></p>
+
     <div className="card-actions justify-end">
       <button 
       onClick={()=>handleSlot(details)}
