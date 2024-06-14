@@ -7,11 +7,24 @@ import {
 import { router } from './Paths/Paths';
 import Auth from './Authfile/Auth';
 
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+const queryClient = new QueryClient()
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <Auth> <div className='max-w-screen-xl mx-auto font-mono'> 
+   <Auth> 
+   <QueryClientProvider client={queryClient}>
+   <div className='max-w-screen-xl mx-auto font-mono'> 
          <RouterProvider router={router} />
 
-</div></Auth>
+</div>
+    </QueryClientProvider>
+   
+
+</Auth>
   </React.StrictMode>,
 )
