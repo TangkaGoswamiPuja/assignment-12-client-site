@@ -12,7 +12,8 @@ const Details = () => {
     const navigate = useNavigate();
     const location = useLocation();
 const axiosSecure = useAxiosSecure();
-const [slot] = useTansack()
+const [,refetch] = useTansack();
+
     const handleSlot = slot =>{
         if(user && user.email){
          console.log(slot, user.email);
@@ -32,6 +33,7 @@ const [slot] = useTansack()
                         showConfirmButton: false,
                         timer: 1500
                       });
+                      refetch();
                 }
   })
     }
@@ -61,7 +63,7 @@ const [slot] = useTansack()
   <h2 className="card-title text-2xl font-semibold">{title}</h2>
     <p>{short_description}</p>
     <p >Date:<span className="bg-pink-400 rounded-sm p-1 font-bold">{date}</span></p>
-    <p>Slots: <span className="bg-pink-400 rounded-sm p-1 font-bold">{slot.length}</span></p>
+    <p>Slots: <span className="bg-pink-400 rounded-sm p-1 font-bold">{slots}</span></p>
     <p>Time: <span className="bg-pink-400 rounded-sm p-1 font-bold">{time}</span></p>
     <p>Price: <span className="bg-pink-400 rounded-sm p-1 font-bold">{price}</span></p>
 
