@@ -6,6 +6,7 @@ const UserDb = () => {
     return (
         <div>
             this is user db {slot.length}
+           
         </div>
     );
 };

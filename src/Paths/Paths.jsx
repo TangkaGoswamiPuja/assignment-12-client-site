@@ -10,6 +10,7 @@ import UserDb from "../Pages/DashBoard/UserDB/UserDb";
 import AdminDb from "../Pages/DashBoard/AdminDB/AdminDb";
 import Private from "../Authfile/Private";
 import Details from "../Pages/All-tests/Details";
+import Dashboard from "../Pages/DashBoard/Dashboard";
 
   export const router = createBrowserRouter([
     {
@@ -36,12 +37,23 @@ import Details from "../Pages/All-tests/Details";
         {path:"/register",
           element:<Reg></Reg>
         },
-        {path:"/userDb",
-          element:<Private><UserDb></UserDb></Private>
-        },
-        {path:"/adminDb",
-          element: <AdminDb></AdminDb>
-        }
+
+       
+      ]
+    },
+    {
+      path: "dashboard",
+      element: <Dashboard></Dashboard>,
+      children:[
+      //   {path:"dashboard",
+      //   element:<Dashboard></Dashboard>,
+      // },
+        {path:"userDb",
+element: <Private><UserDb></UserDb> </Private>    
+ },
+      {path:"adminDb",
+        element: <AdminDb></AdminDb>
+      }
       ]
     },
   ]);
