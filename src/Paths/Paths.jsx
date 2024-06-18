@@ -11,6 +11,8 @@ import AdminDb from "../Pages/DashBoard/AdminDB/AdminDb";
 import Private from "../Authfile/Private";
 import Details from "../Pages/All-tests/Details";
 import Dashboard from "../Pages/DashBoard/Dashboard";
+import Upcome from "../Pages/DashBoard/UserDB/Upcome";
+import Update from "../Pages/DashBoard/UserDB/Update";
 
   export const router = createBrowserRouter([
     {
@@ -53,6 +55,14 @@ element: <Private><UserDb></UserDb> </Private>
  },
       {path:"adminDb",
         element: <AdminDb></AdminDb>
+      },
+      {
+        path:"upcome",
+        element:<Upcome></Upcome>
+      },
+      {
+        path:"update",
+        element:<Update></Update>
       }
       ]
     },
