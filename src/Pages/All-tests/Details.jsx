@@ -67,11 +67,21 @@ const [,refetch] = useTansack();
     <p>Time: <span className="bg-pink-400 rounded-sm p-1 font-bold">{time}</span></p>
     <p>Price: <span className="bg-pink-400 rounded-sm p-1 font-bold">{price}</span></p>
 
-    <div className="card-actions justify-end">
-      <button 
-      onClick={()=>handleSlot(details)}
-      className="btn btn-primary">book now</button>
+   
+    {/* Open the modal using document.getElementById('ID').showModal() method */}
+<button className="btn" onClick={()=>document.getElementById('my_modal_5').showModal()}>BOOK NOW</button>
+<dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+  <div className="modal-box">
+    <h3 className="font-bold text-lg">Hello!</h3>
+    <p className="py-4">Press ESC key or click the button below to close</p>
+    <div className="modal-action">
+      <form method="dialog">
+        {/* if there is a button in form, it will close the modal */}
+        <button  onClick={()=>handleSlot(details)} className="btn">Confirm</button>
+      </form>
     </div>
+  </div>
+</dialog>
   </div>
 </div>
         </div>
