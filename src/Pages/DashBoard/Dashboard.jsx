@@ -1,6 +1,9 @@
 import { NavLink, Outlet } from "react-router-dom";
+import useTansack from "../../Hooks/useTansack";
 
 const Dashboard = () => {
+  const [slot] = useTansack()
+
     return (
         <div className=" grid grid-cols-2">
             {/* nav */}
@@ -16,7 +19,8 @@ const Dashboard = () => {
     <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
       {/* Sidebar content here */}
            <li><NavLink to={'userDb'}>MY PROFILE</NavLink></li> 
-           <li><NavLink to={'upcome'}>MY UPCOMING APPOINTMENT</NavLink></li> 
+           <li><NavLink to={'upcome'}>MY UPCOMING APPOINTMENT({slot.length}
+)</NavLink></li> 
            <li><NavLink to={'update'}>UPDATE PROFILE</NavLink></li> 
 
           <li><NavLink to={'adminDb'}>ADMIN PROFILE</NavLink></li>
