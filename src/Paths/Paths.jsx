@@ -54,15 +54,15 @@ import Update from "../Pages/DashBoard/UserDB/Update";
 element: <Private><UserDb></UserDb> </Private>    
  },
       {path:"adminDb",
-        element: <AdminDb></AdminDb>
+        element: <Private><AdminDb></AdminDb></Private>
       },
       {
         path:"upcome",
-        element:<Upcome></Upcome>
+        element:<Private><Upcome></Upcome></Private>
       },
       {
         path:"update",
-        element:<Update></Update>
+        element:<Private><Update></Update></Private>
       }
       ]
     },

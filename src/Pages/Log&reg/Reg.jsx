@@ -7,8 +7,10 @@ import { BsEyeSlashFill } from "react-icons/bs";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../../Authfile/Auth";
+import useAxiosOpen from "../../Hooks/useAxiosOpen";
 
 const Reg = () => {
+  const axiosOpen= useAxiosOpen();
   const [regError, setRegError] = useState('')
   const [show, setShow] = useState(false)
   const { createrUser } = useContext(AuthContext)
@@ -25,14 +27,26 @@ const Reg = () => {
 
     createrUser(data.email, data.password)
       .then(result => {
-        console.log(result.user)
-        toast("Registration successful !")
+        const userInfo = {
+          name: data.name,
+          email: data.email
+        }
+        axiosOpen.post('/users',userInfo)
+        .then(res=>{
+          if(res.data.insertedId){
+             console.log("user added")
+            reset();
+
+            console.log(result.user)
+            toast("Registration successful !")
+          }
+        })
+       
       })
       .catch(error => {
         console.error(error)
         setRegError(error.message)
       })
-    reset();
 
   }
   return (

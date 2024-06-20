@@ -5,8 +5,10 @@ import { useForm } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../../Authfile/Auth";
+import useAxiosOpen from "../../Hooks/useAxiosOpen";
 
 const Login = () => {
+  const axiosOpen = useAxiosOpen();
     const [logErr , setLogErr] = useState('')
     const {signIn,signInGoogle} = useContext(AuthContext);
 
@@ -41,8 +43,17 @@ const Login = () => {
     
         .then(result=>{
             // console.log(result.user)
-            toast("logged in successfully")
-            navigate(from,{replace:true});
+            const userInfo = {
+              email :result.user?.email,
+              name: result.user?.displayName
+            }
+            axiosOpen.post('/users',userInfo)
+            .then(res=>{
+              console.log(res.data);
+              toast("logged in successfully")
+              navigate(from,{replace:true});
+            })
+           
 
     
         })
