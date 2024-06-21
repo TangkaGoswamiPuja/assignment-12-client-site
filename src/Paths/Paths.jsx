@@ -16,6 +16,7 @@ import Update from "../Pages/DashBoard/UserDB/Update";
 import AllUsers from "../Pages/DashBoard/AdminDB/AllUsers";
 import ManageItems from "../Pages/DashBoard/AdminDB/ManageItems";
 import Bookings from "../Pages/DashBoard/AdminDB/Bookings";
+import AdminRoute from "../Authfile/AdminRoute";
 
   export const router = createBrowserRouter([
     {
@@ -66,16 +67,16 @@ element: <UserDb></UserDb>
       },
       // admin
       {path:"adminDb",
-      element: <AdminDb></AdminDb>
+      element: <AdminRoute><AdminDb></AdminDb></AdminRoute>
     },
     {path:"userlist",
-        element:<AllUsers></AllUsers>
+        element:<AdminRoute><AllUsers></AllUsers></AdminRoute>
       },
       {path:"manage",
-        element:<ManageItems></ManageItems>
+        element:<AdminRoute><ManageItems></ManageItems></AdminRoute>
       },
       {path:"bookings",
-        element:<Bookings></Bookings>
+        element:<AdminRoute><Bookings></Bookings></AdminRoute>
       }
       ]
     },

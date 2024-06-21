@@ -46,7 +46,7 @@ const Auth = ({ children }) => {
 axiosOpen.post('/jwt',userInfo)
 .then(res=>{
     if(res.data.token){
-        localStorage.setItem('acsess-token',res.data.token);
+        localStorage.setItem('access-token',res.data.token);
     }
 })
 
@@ -57,7 +57,7 @@ localStorage.removeItem('acsess-token')
             setLoding(false);
         });
         return () => { unSubscribe() }
-    }, [])
+    }, [axiosOpen])
 
     const authInfo = {
         user, loading, createrUser,signIn,signInGoogle,logOut

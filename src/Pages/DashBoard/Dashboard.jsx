@@ -1,9 +1,10 @@
 import { NavLink, Outlet } from "react-router-dom";
 import useTansack from "../../Hooks/useTansack";
+import useAdmin from "../../Hooks/useAdmin";
 
 const Dashboard = () => {
   const [slot] = useTansack()
-const isAdmin = true;
+const [isAdmin ]= useAdmin();
     return (
         <div className=" grid grid-cols-2">
             {/* nav */}
