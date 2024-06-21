@@ -13,6 +13,9 @@ import Details from "../Pages/All-tests/Details";
 import Dashboard from "../Pages/DashBoard/Dashboard";
 import Upcome from "../Pages/DashBoard/UserDB/Upcome";
 import Update from "../Pages/DashBoard/UserDB/Update";
+import AllUsers from "../Pages/DashBoard/AdminDB/AllUsers";
+import ManageItems from "../Pages/DashBoard/AdminDB/ManageItems";
+import Bookings from "../Pages/DashBoard/AdminDB/Bookings";
 
   export const router = createBrowserRouter([
     {
@@ -45,24 +48,34 @@ import Update from "../Pages/DashBoard/UserDB/Update";
     },
     {
       path: "dashboard",
-      element: <Dashboard></Dashboard>,
+      element: <Private><Dashboard></Dashboard></Private>,
       children:[
       //   {path:"dashboard",
       //   element:<Dashboard></Dashboard>,
       // },
         {path:"userDb",
-element: <Private><UserDb></UserDb> </Private>    
+element: <UserDb></UserDb>   
  },
-      {path:"adminDb",
-        element: <Private><AdminDb></AdminDb></Private>
-      },
       {
         path:"upcome",
-        element:<Private><Upcome></Upcome></Private>
+        element:<Upcome></Upcome>
       },
       {
         path:"update",
-        element:<Private><Update></Update></Private>
+        element:<Update></Update>
+      },
+      // admin
+      {path:"adminDb",
+      element: <AdminDb></AdminDb>
+    },
+    {path:"userlist",
+        element:<AllUsers></AllUsers>
+      },
+      {path:"manage",
+        element:<ManageItems></ManageItems>
+      },
+      {path:"bookings",
+        element:<Bookings></Bookings>
       }
       ]
     },

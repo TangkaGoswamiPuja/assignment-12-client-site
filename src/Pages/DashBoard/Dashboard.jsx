@@ -3,7 +3,7 @@ import useTansack from "../../Hooks/useTansack";
 
 const Dashboard = () => {
   const [slot] = useTansack()
-
+const isAdmin = true;
     return (
         <div className=" grid grid-cols-2">
             {/* nav */}
@@ -18,16 +18,23 @@ const Dashboard = () => {
     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label> 
     <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
       {/* Sidebar content here */}
-           <li><NavLink to={'userDb'}>MY PROFILE</NavLink></li> 
-           <li><NavLink to={'upcome'}>MY UPCOMING APPOINTMENT({slot.length}
-)</NavLink></li> 
-           <li><NavLink to={'update'}>UPDATE PROFILE</NavLink></li> 
-
-          <li><NavLink to={'adminDb'}>ADMIN PROFILE</NavLink></li>
+          {isAdmin ? <>
+           <li><NavLink to="/dashboard/adminDb">ADMIN PROFILE</NavLink></li> 
+           <li><NavLink to="/dashboard/userlist">USER LIST</NavLink></li> 
+           <li><NavLink to="/dashboard/manage">MANAGE ITEMS</NavLink></li> 
+           <li><NavLink to="/dashboard/bookings">MANAGE BOOKINGS</NavLink></li> 
           <li><NavLink to={'/'}>HOME</NavLink></li>
+          </>          :
+          <>
+           <li><NavLink to="/dashboard/userDb">MY PROFILE</NavLink></li> 
+           <li><NavLink to="/dashboard/upcome">MY UPCOMING APPOINTMENT({slot.length}
+)</NavLink></li> 
+           <li><NavLink to="/dashboard/update">UPDATE PROFILE</NavLink></li> 
+          <li><NavLink to={'/'}>HOME</NavLink></li>
+          </>
+          }
 
-      {/* <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li> */}
+    
     </ul>
   
   </div>
