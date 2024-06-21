@@ -9,7 +9,7 @@ const AllUsers = () => {
     const {data: users=[],refetch} = useQuery({
         queryKey:['users'],
         queryFn:async ()=>{
-const res = await axiosSecure.get('/users')
+const res = await axiosSecure.get('/users');
 return res.data;
         }
     });
@@ -81,13 +81,13 @@ const handelAdmin = user =>{
     </thead>
     <tbody>
       {users.map((user,index)=> <tr key={user._id}>
-        <th><bttton onClick={()=>handelDeleteUser(user._id)} className="btn text-xl"><MdDelete /></bttton> 
+        <th><bttton onClick={()=>handelDeleteUser(user)} className="btn text-xl"><MdDelete /></bttton> 
  </th>
 <th>{index+1}</th>
         <td>{user.name}</td>
         <td>{user.email}</td>
         <td>
-            {user.role === 'admin'? 'Admin': <bttton onClick={()=>handelAdmin(user._id)} className="btn text-xl"><BsFillPeopleFill />
+            {user.role === 'admin'? 'Admin': <bttton onClick={()=>handelAdmin(user)} className="btn text-xl"><BsFillPeopleFill />
 </bttton>}
 </td>
         <td><bttton className="btn text-xl">view</bttton></td>
