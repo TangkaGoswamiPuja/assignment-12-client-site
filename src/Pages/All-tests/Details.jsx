@@ -74,7 +74,7 @@ const [,refetch] = useTansack();
 <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
   <div className="modal-box">
     <h3 className="font-bold text-lg">Hello!</h3>
-    <p className="py-4">Press ESC key or click the button below to close</p>
+    <p className="py-4">Press ESC key or click the Cancel button to close</p>
     <p><Payment></Payment></p>
     <div className="modal-action">
       <form method="dialog">
