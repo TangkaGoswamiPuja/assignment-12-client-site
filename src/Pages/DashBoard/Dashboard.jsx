@@ -24,6 +24,8 @@ const [isAdmin ]= useAdmin();
            <li><NavLink to="/dashboard/userlist">USER LIST</NavLink></li> 
            <li><NavLink to="/dashboard/manage">MANAGE ITEMS</NavLink></li> 
            <li><NavLink to="/dashboard/bookings">MANAGE BOOKINGS</NavLink></li> 
+           <li><NavLink to="/dashboard/bannerup">MANAGE BANNER</NavLink></li> 
+           <li><NavLink to="/dashboard/testlist">TEST LIST</NavLink></li> 
           <li><NavLink to={'/'}>HOME</NavLink></li>
           </>          :
           <>

@@ -17,6 +17,8 @@ import AllUsers from "../Pages/DashBoard/AdminDB/AllUsers";
 import ManageItems from "../Pages/DashBoard/AdminDB/ManageItems";
 import Bookings from "../Pages/DashBoard/AdminDB/Bookings";
 import AdminRoute from "../Authfile/AdminRoute";
+import BannerUp from "../Pages/DashBoard/AdminDB/BannerUp";
+import TestList from "../Pages/DashBoard/AdminDB/TestList";
 
   export const router = createBrowserRouter([
     {
@@ -77,6 +79,15 @@ element: <UserDb></UserDb>
       },
       {path:"bookings",
         element:<AdminRoute><Bookings></Bookings></AdminRoute>
+      },
+      {
+        path: "bannerup",
+        element:<AdminRoute><BannerUp></BannerUp></AdminRoute>
+      },
+      {
+        path:"testlist",
+        element:<AdminRoute><TestList></TestList></AdminRoute>
+
       }
       ]
     },
