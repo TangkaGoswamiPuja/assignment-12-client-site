@@ -19,6 +19,7 @@ import Bookings from "../Pages/DashBoard/AdminDB/Bookings";
 import AdminRoute from "../Authfile/AdminRoute";
 import BannerUp from "../Pages/DashBoard/AdminDB/BannerUp";
 import TestList from "../Pages/DashBoard/AdminDB/TestList";
+import UpdateTest from "../Pages/DashBoard/AdminDB/UpdateTest";
 
   export const router = createBrowserRouter([
     {
@@ -35,7 +36,7 @@ import TestList from "../Pages/DashBoard/AdminDB/TestList";
         {
           path: '/details/:id',
           element: <Private><Details></Details></Private>,
-          loader: ({params}) => fetch(`http://localhost:5000/alltest/${params.id}`)
+          loader: ({params}) => fetch(`https://doc-server-site.vercel.app/alltest/${params.id}`)
 
       },
         {
@@ -88,6 +89,11 @@ element: <UserDb></UserDb>
         path:"testlist",
         element:<AdminRoute><TestList></TestList></AdminRoute>
 
+      },
+      {
+        path:"updatetest/:id",
+        element:<AdminRoute><UpdateTest></UpdateTest></AdminRoute>,
+        loader:({params})=>fetch(`https://doc-server-site.vercel.app/alltest/${params.id}`)
       }
       ]
     },

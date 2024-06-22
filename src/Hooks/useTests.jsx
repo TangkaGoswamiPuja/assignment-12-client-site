@@ -7,7 +7,7 @@ const useTests = () => {
     // const [test,setTest]=useState([]);
     // const [loading,setLoading] = useState(true);
     // useEffect(()=>{
-    //     fetch('http://localhost:5000/alltest')
+    //     fetch('https://doc-server-site.vercel.app/alltest')
     //     .then(res=>res.json())
     //     .then(data=>{
     //          setTest(data);

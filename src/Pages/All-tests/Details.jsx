@@ -3,6 +3,7 @@ import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import useTansack from "../../Hooks/useTansack";
+import Payment from "./Payment";
 
 const Details = () => {
     const details = useLoaderData();
@@ -74,9 +75,11 @@ const [,refetch] = useTansack();
   <div className="modal-box">
     <h3 className="font-bold text-lg">Hello!</h3>
     <p className="py-4">Press ESC key or click the button below to close</p>
+    <p><Payment></Payment></p>
     <div className="modal-action">
       <form method="dialog">
         {/* if there is a button in form, it will close the modal */}
+        <button className="btn">Cancel</button>
         <button  onClick={()=>handleSlot(details)} className="btn">Confirm</button>
       </form>
     </div>

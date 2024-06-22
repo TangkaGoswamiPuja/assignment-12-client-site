@@ -8,7 +8,7 @@ const AllTests = () => {
     const [search, setSearch] = useState('')
 
     useEffect(()=>{
-        fetch('http://localhost:5000/alltest')
+        fetch('https://doc-server-site.vercel.app/alltest')
         .then(res=>res.json())
         .then(data=>{
             // console.log(data)

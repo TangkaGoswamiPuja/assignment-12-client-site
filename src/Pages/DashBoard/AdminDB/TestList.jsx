@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import useTests from "../../../Hooks/useTests";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { MdDelete } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const TestList = () => {
 const [test, ,refetch] = useTests();
@@ -42,6 +43,7 @@ const handelDelete =(item)=>{
     <thead>
       <tr>
         {/* <th></th> */}
+        <th>Image</th>
         <th>Name</th>
         <th>Date</th>
         <th>Time</th>
@@ -51,10 +53,22 @@ const handelDelete =(item)=>{
       {test.map(item=> <tr key={item._id}>
         <th><bttton onClick={()=>handelDelete(item)} className="btn text-xl"><MdDelete/></bttton>
 </th>
+<td>
+          <div className="flex items-center gap-3">
+            <div className="avatar">
+              <div className="mask mask-squircle w-12 h-12">
+                <img src={item.image} alt="Avatar Tailwind CSS Component" />
+              </div>
+            </div>
+           
+          </div>
+        </td>
         <td>{item.title}</td>
         <td>{item.date}</td>
         <td>{item.time}</td>
-        {/* <td><bttton className="btn text-xl"><IoPrint /></bttton></td> */}
+        <td>
+<Link to={`/dashboard/updatetest/${item._id}`}> <bttton className="btn text-xl">update</bttton></Link>           
+ </td>
 
       </tr>)}
      
